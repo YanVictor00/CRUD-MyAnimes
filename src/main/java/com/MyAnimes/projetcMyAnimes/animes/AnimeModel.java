@@ -25,7 +25,7 @@ public class AnimeModel {
     @Column(name = "NOTA")
     int nota;
 
-    @Column(name = "PERSONAGEM FAVORITO")
+    @Column(name = "PERSONAGEMFAV")
     String personagemFavorito;
 
 }
