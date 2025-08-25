@@ -28,4 +28,9 @@ public class AnimeService {
         return animePorId.orElse(null);
     }
 
+    //CREATE ANIME
+    public AnimeModel createAnimes(AnimeModel animeModel){
+        return animeRepository.save(animeModel);
+    }
+
 }
