@@ -46,4 +46,9 @@ public class AnimeController {
         return animeService.updateAnimes(id, animeModel);
     }
 
+    //DELETE
+    @DeleteMapping("/delete/{id}")
+    public void deleteAnimes(@PathVariable Long id){
+        animeService.deleteAnimes(id);
+    }
 }

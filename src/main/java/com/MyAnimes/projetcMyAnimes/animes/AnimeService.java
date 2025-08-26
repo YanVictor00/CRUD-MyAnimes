@@ -43,4 +43,9 @@ public class AnimeService {
         }
     }
 
+    //DELETE ANIME
+    public void deleteAnimes(Long id){
+        animeRepository.deleteById(id);
+    }
+
 }
