@@ -32,12 +32,18 @@ public class AnimeController {
     @GetMapping("/read/{id}")
     public AnimeModel readAnimesId(@PathVariable Long id){
         return animeService.readAnimesId(id);
-    };
+    }
 
     //CREATE
     @PostMapping("/create")
     public AnimeModel createAnimes(@RequestBody AnimeModel animeModel){
         return animeService.createAnimes(animeModel);
+    }
+
+    //UPDATE
+    @PutMapping("/update/{id}")
+    public AnimeModel updateAnimes(@PathVariable Long id, @RequestBody AnimeModel animeModel){
+        return animeService.updateAnimes(id, animeModel);
     }
 
 }

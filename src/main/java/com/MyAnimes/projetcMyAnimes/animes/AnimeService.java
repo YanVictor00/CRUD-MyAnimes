@@ -17,7 +17,7 @@ public class AnimeService {
         this.animeRepository = animeRepository;
     }
 
-    //READ
+    //READ ANIMES
     public List<AnimeModel> readAnimes(){
         return animeRepository.findAll();
     }
@@ -31,6 +31,16 @@ public class AnimeService {
     //CREATE ANIME
     public AnimeModel createAnimes(AnimeModel animeModel){
         return animeRepository.save(animeModel);
+    }
+
+    //UPDATE ANIME
+    public AnimeModel updateAnimes(Long id, AnimeModel animeAtualizado){
+        if (animeRepository.existsById(id)){
+            animeAtualizado.setId(id);
+            return animeRepository.save(animeAtualizado);
+        }else{
+            return null;
+        }
     }
 
 }
